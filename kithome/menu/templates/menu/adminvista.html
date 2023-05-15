@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- css file link  -->
-    <link rel="stylesheet" href=" {% static 'css/style.css' %} ">
+    <link rel="stylesheet" href=" {% static 'menu/css/style.css' %} ">
 
 </head>
 <body>
@@ -20,7 +20,7 @@
 
 <header class="header">
 
-    <a href="home.html" class="logo"> <i class="fas fa-lightbulb"></i> KitHome </a>
+    <a href="{$ url 'home' %}" class="logo"> <i class="fas fa-lightbulb"></i> KitHome </a>
 
     <form action="" class="search-form">
         <input type="search" placeholder="Buscar..." id="search-box">
@@ -45,11 +45,11 @@
 <!-- navbar  -->
 
 <nav class="navbar">
-    <a href="home.html">Inicio</a>
-    <a href="shop.html">Tienda</a>
-    <a href="about.html">Nosotros</a>
-    <a href="team.html">Equipo</a>
-    <a href="contact.html">Contactanos</a>
+    <a href="{% url 'home' %}">Inicio</a>
+    <a href="{% url 'shop' %}">Tienda</a>
+    <a href="{% url 'about' %}">Nosotros</a>
+    <a href="{% url 'team' %}">Equipo</a>
+    <a href="{% url 'contact' %}">Contactanos</a>
 </nav>
 
 <!-- carrito de compras  -->
@@ -58,7 +58,7 @@
 
     <div class="box">
         <i class="fas fa-times"></i>
-        <img src="image/cart-img-1.jpg" alt="">
+        <img src="{% static 'menu/image/cart-img-1.jpg' %}" alt="">
         <div class="content">
             <h3>nombre mueble</h3>
             <span class="quantity"> 1 </span>
@@ -69,7 +69,7 @@
 
     <div class="box">
         <i class="fas fa-times"></i>
-        <img src="image/cart-img-2.jpg" alt="">
+        <img src="{% static 'menu/image/cart-img-2.jpg' %}" alt="">
         <div class="content">
             <h3>nombre mueble</h3>
             <span class="quantity"> 1 </span>
@@ -80,7 +80,7 @@
 
     <div class="box">
         <i class="fas fa-times"></i>
-        <img src="image/cart-img-3.jpg" alt="">
+        <img src="{% static 'menu/image/cart-img-3.jpg' %}" alt="">
         <div class="content">
             <h3>nombre mueble</h3>
             <span class="quantity"> 1 </span>
@@ -91,7 +91,7 @@
 
     <div class="box">
         <i class="fas fa-times"></i>
-        <img src="image/cart-img-4.jpg" alt="">
+        <img src="{% static 'menu/image/cart-img-4.jpg' %}" alt="">
         <div class="content">
             <h3>nombre mueble</h3>
             <span class="quantity"> 1 </span>
@@ -102,7 +102,7 @@
 
     <h3 class="total"> total : <span>$100.000</span> </h3>
 
-    <a href="checkit.html" class="btn">Pagar</a>
+    <a href="{% url 'checkit' %}" class="btn">Pagar</a>
 
 </div>
 
@@ -119,8 +119,8 @@
             <label for="remember-me">Recuerdame</label>
         </div>
         <input type="submit" value="Iniciar sesión" class="btn">
-        <p>¿Olvidaste tu contraseña? <a href="recovery.html">click aqui</a></p>
-        <p>¿No tienes una cuenta? <a href="register.html">Crea una Ahora</a></p>
+        <p>¿Olvidaste tu contraseña? <a href="{% url 'recovery' %}.">click aqui</a></p>
+        <p>¿No tienes una cuenta? <a href="{% url 'register' %}">Crea una Ahora</a></p>
     </form>
 
 </div>
@@ -191,8 +191,8 @@
 
         <div class="box">
             <h3>KitHome</h3>
-            <a href="home.html"> <i class="fas fa-arrow-right"></i> home</a>
-            <a href="shop.html"> <i class="fas fa-arrow-right"></i> tienda</a>
+            <a href="{% url 'home' %}"> <i class="fas fa-arrow-right"></i> home</a>
+            <a href="{% url 'shop' %}"> <i class="fas fa-arrow-right"></i> tienda</a>
             <a href="about.html"> <i class="fas fa-arrow-right"></i> nosotros</a>
             <a href="team.html"> <i class="fas fa-arrow-right"></i> equipo</a>
             <a href="contact.html"> <i class="fas fa-arrow-right"></i> contacto</a>
@@ -234,7 +234,7 @@
 </section>
 
 <!-- custom js file link  -->
-<script src="{% static 'js/script.js' %} "></script>
+<script src="{% static 'menu/js/script.js' %} "></script>
     
 </body>
 </html>

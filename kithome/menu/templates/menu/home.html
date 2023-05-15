@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- css file link  -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/style.css' %}">
 
 </head>
 <body>
@@ -20,7 +20,7 @@
 
 <header class="header">
 
-    <a href="home.html" class="logo"> <i class="fas fa-lightbulb"></i> KitHome </a>
+    <a href="{% url 'home' %}" class="logo"> <i class="fas fa-lightbulb"></i> KitHome </a>
 
     <form action="" class="search-form">
         <input type="search" placeholder="Buscar..." id="search-box">
@@ -45,11 +45,11 @@
 <!-- navbar  -->
 
 <nav class="navbar">
-    <a href="home.html">Inicio</a>
-    <a href="shop.html">Tienda</a>
-    <a href="about.html">Nosotros</a>
-    <a href="team.html">Equipo</a>
-    <a href="contact.html">Contactanos</a>
+    <a href="{% url 'home' %}">Inicio</a>
+    <a href="{% url 'shop' %}">Tienda</a>
+    <a href="{% url 'about' %}">Nosotros</a>
+    <a href="{% url 'team' %}">Equipo</a>
+    <a href="{% url 'contact' %}">Contactanos</a>
 </nav>
 
 <!-- carrito  -->
@@ -58,7 +58,7 @@
 
     <div class="box">
         <i class="fas fa-times"></i>
-        <img src="image/cart-img-1.jpg" alt="">
+        <img src="{% static 'menu/image/cart-img-1.jpg' %}" alt="">
         <div class="content">
             <h3>silla moderna</h3>
             <span class="quantity"> 1 </span>

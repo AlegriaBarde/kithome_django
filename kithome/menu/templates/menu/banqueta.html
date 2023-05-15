@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Link css base  -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/style.css' %}">
 
     <!-- Link css detalles-->
-    <link rel="stylesheet" href="{% static 'css/detalles.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/detalles.css' %}">
 
 </head>
 
@@ -25,7 +25,7 @@
 
     <header class="header">
 
-        <a href="home.html" class="logo"> <i class="fas fa-lightbulb"></i> KitHome </a>
+        <a href="{% url 'home' %}" class="logo"> <i class="fas fa-lightbulb"></i> KitHome </a>
 
         <form action="" class="search-form">
             <input type="search" placeholder="Buscar..." id="search-box">
