@@ -69,7 +69,7 @@
 
     <div class="box">
         <i class="fas fa-times"></i>
-        <img src="image/cart-img-2.jpg" alt="">
+        <img src="{% static 'menu/image/cart-img-2.jpg' %}" alt="">
         <div class="content">
             <h3>nombre mueble</h3>
             <span class="quantity"> 1 </span>
@@ -80,7 +80,7 @@
 
     <div class="box">
         <i class="fas fa-times"></i>
-        <img src="image/cart-img-3.jpg" alt="">
+        <img src="{% static 'menu/image/cart-img-3.jpg' %}" alt="">
         <div class="content">
             <h3>nombre mueble</h3>
             <span class="quantity"> 1 </span>
@@ -91,7 +91,7 @@
 
     <div class="box">
         <i class="fas fa-times"></i>
-        <img src="image/cart-img-4.jpg" alt="">
+        <img src="{% static 'menuimage/cart-img-4.jpg' %}" alt="">
         <div class="content">
             <h3>nombre mueble</h3>
             <span class="quantity"> 1 </span>
@@ -102,7 +102,7 @@
 
     <h3 class="total"> total : <span>$100.000</span> </h3>
 
-    <a href="checkit.html" class="btn">Pagar</a>
+    <a href="{% url 'checkit' %}" class="btn">Pagar</a>
 
 </div>
 
@@ -119,8 +119,8 @@
             <label for="remember-me">Recuerdame</label>
         </div>
         <input type="submit" value="Iniciar sesión" class="btn">
-        <p>¿Olvidaste tu contraseña? <a href="recovery.html">click aqui</a></p>
-        <p>¿No tienes una cuenta? <a href="register.html">Crea una Ahora</a></p>
+        <p>¿Olvidaste tu contraseña? <a href="{% url 'recovery' %}">click aqui</a></p>
+        <p>¿No tienes una cuenta? <a href="{% url 'register' %}">Crea una Ahora</a></p>
     </form>
 
 </div>
@@ -139,7 +139,7 @@
                 <a href="#" class="btn">comprar ahora</a>
             </div>
             <div class="image">
-                <img src="image/home-img-1.png" alt="">
+                <img src="{% static 'meun/image/home-img-1.png' %}" alt="">
             </div>
         </div>
 
@@ -152,7 +152,7 @@
                 <a href="#" class="btn">comprar ahora</a>
             </div>
             <div class="image">
-                <img src="image/home-img-2.png" alt="">
+                <img src="{% static 'menu/image/home-img-2.png' %}" alt="">
             </div>
         </div>
 
@@ -170,7 +170,7 @@
 <section class="banner-container">
 
     <div class="banner">
-        <img src="image/banner-1.jpg" alt="">
+        <img src="{% static 'menu/image/banner-1.jpg' %}" alt="">
         <div class="content">
             <span>oferta limitada</span>
             <h3>hasta 50% off</h3>
@@ -179,7 +179,7 @@
     </div>
 
     <div class="banner">
-        <img src="image/banner-2.jpg" alt="">
+        <img src="{% static 'menu/image/banner-2.jpg' %}" alt="">
         <div class="content">
             <span>oferta limitada</span>
             <h3>hasta 50% off</h3>
@@ -188,7 +188,7 @@
     </div>
 
     <div class="banner">
-        <img src="image/banner-3.jpg" alt="">
+        <img src="{% static 'menu/image/banner-3.jpg' %}" alt="">
         <div class="content">
             <span>oferta limitada</span>
             <h3>hasta 50% off</h3>
@@ -213,18 +213,18 @@
 
         <div class="box">
             <h3>Kithome</h3>
-            <a href="home.html"> <i class="fas fa-arrow-right"></i> home</a>
-            <a href="shop.html"> <i class="fas fa-arrow-right"></i> tienda</a>
-            <a href="about.html"> <i class="fas fa-arrow-right"></i> nosotros</a>
-            <a href="team.html"> <i class="fas fa-arrow-right"></i> equipo</a>
-            <a href="contact.html"> <i class="fas fa-arrow-right"></i> contacto</a>
+            <a href="{% url 'home' %}"> <i class="fas fa-arrow-right"></i> Inicio</a>
+            <a href="{% url 'shop' %}"> <i class="fas fa-arrow-right"></i> Tienda</a>
+            <a href="{% url 'about' %}"> <i class="fas fa-arrow-right"></i> Nosotros</a>
+            <a href="{% url 'team' %}"> <i class="fas fa-arrow-right"></i> Equipo</a>
+            <a href="{% url 'contact' %}"> <i class="fas fa-arrow-right"></i> Contactanos</a>
         </div>
 
         <div class="box">
             <h3>Mi tienda</h3>
             <a href="#"> <i class="fas fa-arrow-right"></i> mi pedido</a>
             <a href="#"> <i class="fas fa-arrow-right"></i> mi lista de deseos</a>
-            <a href="perfil.html"> <i class="fas fa-arrow-right"></i> mi perfil</a>
+            <a href="{% url 'perfil' %}"> <i class="fas fa-arrow-right"></i> mi perfil</a>
             <a href="#"> <i class="fas fa-arrow-right"></i> mis favoritos</a>
             <a href="#"> <i class="fas fa-arrow-right"></i> terminos y condiciones</a>
         </div>
@@ -256,7 +256,7 @@
 </section>
 
 <!-- custom js file link  -->
-<script src="{% static 'js/script.js' %}"></script>
+<script src="{% static 'menu/js/script.js' %}"></script>
     
 </body>
 </html>

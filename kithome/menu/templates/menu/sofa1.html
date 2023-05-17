@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <!-- Link css base  -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/style.css' %}">
 
     <!-- Link css detalles-->
-    <link rel="stylesheet" href="{% static 'css/detalles.css' %}">
+    <link rel="stylesheet" href="{% static 'menu/css/detalles.css' %}">
 
 </head>
 
@@ -25,7 +25,7 @@
 
     <header class="header">
 
-        <a href="home.html" class="logo"> <i class="fas fa-lightbulb"></i> KitHome </a>
+        <a href="{% url 'home' %} " class="logo"> <i class="fas fa-lightbulb"></i> KitHome </a>
 
         <form action="" class="search-form">
             <input type="search" placeholder="Buscar..." id="search-box">
@@ -50,11 +50,11 @@
     <!-- navbar  -->
 
     <nav class="navbar">
-        <a href="home.html">Inicio</a>
-        <a href="shop.html">Tienda</a>
-        <a href="about.html">Nosotros</a>
-        <a href="team.html">Equipo</a>
-        <a href="contact.html">Contactanos</a>
+        <a href="{% url 'home' %}">Inicio</a>
+        <a href="{% url 'shop' %}">Tienda</a>
+        <a href="{% url 'about' %}">Nosotros</a>
+        <a href="{% url 'team' %}">Equipo</a>
+        <a href="{% url 'contact' %}">Contactanos</a>
     </nav>
 
     <!-- carrito  -->
@@ -63,7 +63,7 @@
 
         <div class="box">
             <i class="fas fa-times"></i>
-            <img src="image/cart-img-1.jpg" alt="">
+            <img src="{% static 'meun/image/cart-img-1.jpg' %}" alt="">
             <div class="content">
                 <h3>nombre mueble</h3>
                 <span class="quantity"> 1 </span>
@@ -71,10 +71,10 @@
                 <span class="price"> $25.000 </span>
             </div>
         </div>
-
+    
         <div class="box">
             <i class="fas fa-times"></i>
-            <img src="image/cart-img-2.jpg" alt="">
+            <img src="{% static 'menu/image/cart-img-2.jpg' %}" alt="">
             <div class="content">
                 <h3>nombre mueble</h3>
                 <span class="quantity"> 1 </span>
@@ -82,10 +82,10 @@
                 <span class="price"> $25.000 </span>
             </div>
         </div>
-
+    
         <div class="box">
             <i class="fas fa-times"></i>
-            <img src="image/cart-img-3.jpg" alt="">
+            <img src="{% static 'menu/image/cart-img-3.jpg' %}" alt="">
             <div class="content">
                 <h3>nombre mueble</h3>
                 <span class="quantity"> 1 </span>
@@ -93,10 +93,10 @@
                 <span class="price"> $25.000 </span>
             </div>
         </div>
-
+    
         <div class="box">
             <i class="fas fa-times"></i>
-            <img src="image/cart-img-4.jpg" alt="">
+            <img src="{% static 'menu/image/cart-img-4.jpg' %}" alt="">
             <div class="content">
                 <h3>nombre mueble</h3>
                 <span class="quantity"> 1 </span>
@@ -104,11 +104,11 @@
                 <span class="price"> $25.000 </span>
             </div>
         </div>
-
+    
         <h3 class="total"> total : <span>$100.000</span> </h3>
-
-        <a href="checkit.html" class="btn">Pagar</a>
-
+    
+        <a href="{% url 'checkit'%}" class="btn">Pagar</a>
+    
     </div>
 
     <!-- inicio de sesion  -->
@@ -124,15 +124,15 @@
                 <label for="remember-me">Recuerdame</label>
             </div>
             <input type="submit" value="Iniciar sesión" class="btn">
-            <p>¿Olvidaste tu contraseña? <a href="recovery.html">click aqui</a></p>
-            <p>¿No tienes una cuenta? <a href="register.html">Crea una Ahora</a></p>
+            <p>¿Olvidaste tu contraseña? <a href="{% url 'recovery' %}">click aqui</a></p>
+            <p>¿No tienes una cuenta? <a href="{% url 'register' %}">Crea una Ahora</a></p>
         </form>
 
     </div>
 
     <section class="heading">
         <h3></h3>
-        <p> <a href="home.html">Inicio</a> / <span>Detalles</span> </p>
+        <p> <a href="{% url 'home' %}">Inicio</a> / <span>Detalles</span> </p>
     </section>
 
     <!-- Detalles del producto -->
@@ -140,7 +140,7 @@
     <section class="about">
 
         <div class="image">
-            <img src="image/product-2.jpg" alt="">
+            <img src="{% static 'meun/image/product-2.jpg' %}" alt="">
         </div>
 
         <div class="content">
@@ -168,19 +168,19 @@
         <div class="box-container">
 
             <div class="box">
-                <h3>KitHome</h3>
-                <a href="home.html"> <i class="fas fa-arrow-right"></i> Inicio</a>
-                <a href="shop.html"> <i class="fas fa-arrow-right"></i> Tienda</a>
-                <a href="about.html"> <i class="fas fa-arrow-right"></i> Nosotros</a>
-                <a href="team.html"> <i class="fas fa-arrow-right"></i> Equipo</a>
-                <a href="contact.html"> <i class="fas fa-arrow-right"></i> Contactanos</a>
+                <h3>Kithome</h3>
+                <a href="{% url 'home' %}"> <i class="fas fa-arrow-right"></i> Inicio</a>
+                <a href="{% url 'shop' %}"> <i class="fas fa-arrow-right"></i> Tienda</a>
+                <a href="{% url 'about' %}"> <i class="fas fa-arrow-right"></i> Nosotros</a>
+                <a href="{% url 'team' %}"> <i class="fas fa-arrow-right"></i> Equipo</a>
+                <a href="{% url 'contact' %}"> <i class="fas fa-arrow-right"></i> Contactanos</a>
             </div>
-
+    
             <div class="box">
                 <h3>Mi tienda</h3>
                 <a href="#"> <i class="fas fa-arrow-right"></i> mi pedido</a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> mi lista de deseos</a>
-                <a href="perfil.html"> <i class="fas fa-arrow-right"></i> mi perfil</a>
+                <a href="{% url 'perfil' %}"> <i class="fas fa-arrow-right"></i> mi perfil</a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> mis favoritos</a>
                 <a href="#"> <i class="fas fa-arrow-right"></i> terminos y condiciones</a>
             </div>
@@ -212,7 +212,7 @@
     </section>
 
     <!-- custom js file link  -->
-    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'menu/js/script.js' %}"></script>
 
 </body>
 
